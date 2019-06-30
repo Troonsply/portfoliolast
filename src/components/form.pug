@@ -1,0 +1,16 @@
+section.form 
+    h2.feedback__title.title Связаться со мной
+    form.feedback__form
+        label.feedback__form-block
+            .feedback__label-text Ваше имя
+                +icon(`User`,'feedback-icon')
+                input.feedback-name(type="text" name='name' id='name')
+        label.feedback__form-block
+            .feedback__label-text Ваш email
+            +icon(`Envelope`,'feedback-icon')
+            input.feedback-name(type="text" name='mail' id='mail')
+        label.feedback__form-block
+            .feedback__label-text Сообщение к письму
+            +icon(`Chat`,'feedback-icon')
+            textarea.feedback-name(type="text" name='comment' id='comment')
+        button.form__button(type="submit" name='Btn') Отправить
