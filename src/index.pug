@@ -1,0 +1,67 @@
+include ./mixins.pug
+- var Frontend = ['HTML5', 'CSS3', 'Javascript', 'Jquery  и Vue.js'];
+- var Workflow = ['GIT', 'Terminal', 'Gulp', 'Webpack'];
+- var Previews = ['HTML5', 'CSS3', 'Javascript'];
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta&attributes({'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge'})
+    title My Portfolio
+  body
+    .wrapper(style=`background-image:url(${require("images/parallax/mountain.jpg")})`)
+      .maincontent
+        include components/header
+        include components/welcom
+        include components/hero
+
+          //-   section.scill
+          //-     ul.skill__list Front-end
+          //-     each item in Frontend
+          //-       li.skill__item
+          //-         p.skill__text #{item}
+          //-     ul.skill__list Workflow
+          //-     each item in Workflow
+          //-       li.skill__item
+          //-         p.skill__text #{item}
+          //- section.workpreviews
+          //-   .previews-skill
+          //-     ul.previews-skill__list
+          //-         each item in Previews
+          //-           li.previews-skill__item
+          //-             p.previews-skill__text #{item}
+          //-     h2.previews-skill__title Сайт школы  образования
+          //-     p.previews-skill__text Эта девушка проходила обучение веб-разработке не где-то, а в Loftschool!3,5 месяца только самых тяжелых испытаний и бессонных ночей!
+          //-     a.previews-skill__link(href="#") Посмотреть сайт
+          //- section.reviews
+          //-   h2.reviews-title Что обо мне говорят
+          //-   .reviews-slider
+          //-     .reviews-slider__one
+          //-       +icon('Quote','Quote-svg')
+          //-       p.reviews-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
+          //-       .reviews-avatar
+          //-         +image('content/reviewsdima.jpg', 'reviews-pic')
+          //-       p.reviews-username Ковальчук Дмитрий
+          //-       p.reviews-position Основатель Loftschool
+          //-     .reviews-slider__two
+          //-       +icon('Quote','Quote-svg')
+          //-       p.reviews-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          //-       .reviews-avatar
+          //-         +image('content/reviewsvova.jpg', 'reviews-pic')
+          //-       p.reviews-username Владимир Сабанцев
+          //-       p.reviews-position Преподаватель
+          //- section.connection
+          //-   form.form
+          //-     .form__tag
+          //-       label.label-form #[input.input-form(type="text" name='name' id='name')]Ваше имя
+          //-       label.label-form #[input.input-form(type="text" name='mail' id='mail')]Ваш email
+          //-       label.label-form #[textarea.textarea-form(type="text" name='comment' id='comment')]Сообщение к письму
+          //-     .form__buttons
+          //-       button.form__button(type="submit" name='Btn') Отправить
+          //- footer.footer
+
+
+
+                      
