@@ -8,12 +8,11 @@ html(lang="ru")
     meta&attributes({'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge'})
     title My Portfolio
   body
-    .wrapper(style=`background-image:url(${require("images/parallax/mountain.jpg")})`)
+    .wrapper
       .maincontent
-        include components/header
         include components/welcom
         include components/hero
-        include components/benefit
+        include components/skills
         include components/job
         .maincontent__autmn-bg
           include components/reviews

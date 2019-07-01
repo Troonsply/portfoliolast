@@ -1,0 +1,82 @@
+.skills {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-skills {
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: url('../images/decorative/bag.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    bottom: 25%;
+    height: 60%;
+    width: 40%;
+    left: 5%;
+    z-index: 10;
+  }
+}
+.skills__content {
+  width: 48%;
+  margin: 0 auto 5.125rem;
+} 
+.skills__title {
+  font-size: 24px;
+  color:#414c63;
+  font-weight: 700;
+  margin-bottom: 35px;
+
+  @include tablets {
+    text-align: center;
+  }
+}
+.skills-text {
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.7;
+  padding-top: 50px;
+
+  @include tablets {
+    text-align: center;
+    line-height: 24px;
+  }
+}
+.skills__user {
+  display: flex;
+  justify-content: flex-end;
+
+  @include tablets {
+    margin-top: 50px;
+    justify-content: center;
+  }
+}
+.skills__user-container {
+  width: 65%;
+}
+.skills__list {
+
+  @include tablets {
+    padding-left: 0;
+  }
+}
+.skills__item {
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.diagram__list {
+  display: flex;
+  align-items: center;
+}
+.diagram__item {
+  position: relative;
+  margin-right: 25px;
+}

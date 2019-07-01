@@ -1,0 +1,31 @@
+.skill {
+  width: 10.375rem;
+  height: 10.375rem;
+  transform: rotate(-180deg);
+  fill: transparent;
+  position: relative;
+
+  &__circle {
+    fill: transparent;
+  }
+  &__circle_under {
+    stroke: #eaeaea;
+    stroke-width: 0.3125rem;
+  }
+  &__circle_above {
+    stroke-width: 0.75rem;
+    stroke-dasharray: 288;
+    stroke-dashoffset: 100;
+  }
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color:#414c63;
+    opacity: .7;
+  }
+}

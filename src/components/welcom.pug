@@ -1,5 +1,8 @@
 section(class='welcome fullscreen-section')
-    h2.welcome__title Личный сайт веб-разработчика
-    h1.welcome__name-title Буслова Катерина
-    a.welcome__scroll Скролл
-        +icon('Scroll','Scroll-svg')
+    include header
+    .welcom__container
+        h2.welcome__title Личный сайт<br> веб-разработчика
+        h1.welcome__name-title Буслова<br> Катерина
+        .welcome__scroll 
+            a.welcom__scroll-link Скролл
+                +icon('Scroll','scroll-svg')
