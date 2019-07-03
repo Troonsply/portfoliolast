@@ -1,0 +1,25 @@
+mixin slider(slidesNum)
+  ul.slider-list
+    - for(var i = 0; i < slidesNum.length; i++)
+      li.slider-list__item(data-slide=`${slidesNum[i]}`)
+        +image(`content/portfolio/project-${slidesNum[i]}.jpg`, 'slider-list__item-pic', 'img', 'Project')
+.slider-wrap
+  .slider
+    +image('content/portfolio/project-preview.jpg', 'slider__preview', 'img', 'Project Preview')
+    +slider(['1','2','3','4'])
+    .slider__switch-wrap
+      button.slider__switch(class="slider__switch-prev")
+        +icon('short_arrow', 'slider__arrow-svg slider__arrow-svg-prev')
+      button.slider__switch(class="slider__switch-next")
+        +icon('short_arrow', 'slider__arrow-svg slider__arrow-svg-next slider__arrow-svg--denied')
+    .desc-wrap
+        .desc
+            ul.code-link-list
+                li.code-link-list__item HTML
+                li.code-link-list__item CSS
+                li.code-link-list__item Javacript
+            .desc-content
+                h4.desc__title Сайт школы образования
+                .desc__info Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                a.desc-link Посмотреть сайт
+                    +icon('Link', 'desc-link__svg')

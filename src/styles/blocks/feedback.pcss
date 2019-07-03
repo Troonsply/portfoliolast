@@ -1,0 +1,57 @@
+.feedback {
+      background-image: url("../images/parallax/budda.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.feedback__title {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 13%;
+}
+.arrow__btn--prev, .arrow__btn--next {
+    width: 10px;
+    height: 10px;
+    fill: $text-color;
+  }
+.arrow__prev_rounded, .arrow__next_rounded {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 43%;
+    cursor: pointer;
+    border: 1px solid $text-color;
+    transition: border-color .3s;
+  }
+.arrow__prev_rounded {
+    transform: rotate(180deg);
+    &:hover {
+      border-color: #596478;
+      transition: border-color .3s;
+      .arrow__btn--prev {
+      fill: #596478;
+      transition: fill .3s;
+    }
+  }
+}
+ .arrow__next_rounded {
+    left: 49%;
+    &:hover {
+      border-color: #596478;
+      transition: border-color .3s;
+      .arrow__btn--next {
+      fill: #596478;
+      transition: fill .3s;
+    }
+  }
+}

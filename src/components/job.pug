@@ -1,10 +1,4 @@
 section.job
-    .job__skill
-        ul.job__skill__list
-            - var Previews = ['HTML5', 'CSS3', 'Javascript'];
-            each item in Previews
-                li.job__skill__item
-                    p.job__skill__text #{item}
-        h2.job__skill__title Сайт школы  образования
-            p.job__skill__text Эта девушка проходила обучение веб-разработке не где-то, а в Loftschool!3,5 месяца только самых тяжелых испытаний и бессонных ночей!
-            a.job__skill__link(href="#") Посмотреть сайт 
+	.container.container-job
+		h2.title.job__title Мои работы
+			include job-slider.pug

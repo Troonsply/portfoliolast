@@ -1,18 +1,25 @@
-.reviews
-    h2.reviews__title.title Что обо мне говорят
-        .reviews__slider-controls
-            button.reviews__btn.reviews__btn--prev(type='bottun')
-            button.reviews__btn.reviews__btn--next(type='bottun')
-        ul.reviews-slider
-            li.reviews__item
-                p.reviews-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                .reviews-avatar
-                    +image('content/reviewsdima.jpg', 'reviews-pic')
-                p.reviews-username Ковальчук Дмитрий
-                p.reviews-position Основатель Loftschool
-            li.reviews__item
-                p.reviews-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                .reviews-avatar
-                    +image('content/reviewsvova.jpg', 'reviews-pic')
-                p.reviews-username Владимир Сабанцев
-                p.reviews-position Преподаватель
+ul.feedback__slider
+    li.feedback__slider-item.reviews
+        .reviews__image
+            +icon('Quote', 'reviews__icon')
+        .reviews__content
+            blockreviews.reviews__text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+            .reviews__author
+                .user.user--horizontal
+                    .user__avatar.user__avatar_small
+                        +image('content/user/reviewsdima.jpg', 'user__avatar--small-pic')
+                    .user__bio
+                        .user__name Ковальчук Дмитрий
+                        .user__position Основатель LoftSchool
+    li.feedback__slider-item.reviews
+        .reviews__image
+            +icon('Quote', 'reviews__icon')
+        .reviews__content
+            blockquote.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах:)
+            .reviews__author
+                .user.user--horizontal
+                    .user__avatar.user__avatar_small
+                        +image('content/user/reviewsvova.jpg', 'user__avatar--small-pic')
+                    .user__bio
+                        .user__name Владимир Сабанцев
+                        .user__position Преподаватель

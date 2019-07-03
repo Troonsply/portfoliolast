@@ -1,0 +1,10 @@
+section.feedback
+    .container.container-feedback
+        .feedback__title
+            h2.title.feedback-title Что обо мне говорят
+                button.arrow__prev_rounded(type='bottun')
+                  +icon('short_arrow', 'arrow__btn--prev')
+                button.arrow__next_rounded(type='bottun')
+                  +icon('short_arrow', 'arrow__btn--next')
+        include reviews
+        include form
