@@ -5,13 +5,13 @@ section.form
             form.form(action="#")
                 .form__row
                     .form__block
-                        label.form__block-title(for='name') Ваше имя
+                        label.form__block-title(for='name') Введите ваше имя
                         .input
                             +icon(`User`,'feedback-icon')
                             input.form__block-input(type='text', id='name', name='name', placeholder="Ковальчук Дмитрий", required='')
                         .error
                     .form__block
-                        label.form__block-title(for='email') Ваш email
+                        label.form__block-title(for='email') Введите ваш email
                         .input
                             +icon(`Envelope`,'feedback-icon')
                             input.form__block-input(type='text', id='email', name='email', placeholder="loftschool@study.com", required='')
