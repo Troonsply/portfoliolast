@@ -23,6 +23,8 @@
     box-shadow: 0px 10px 24px 0 rgba(#000, .3);
     margin: 80px 75px 80px 75px;
     flex-shrink: 0;
+    object-fit: cover;
+    object-position: top;
 }
 .hero__desc {
   font-weight: 600;
@@ -45,8 +47,6 @@
     opacity: 1;
 }
 .hero__content {
-  color: #414c63;
-  opacity: 0.7;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,12 +58,14 @@
 }
 .hero__text {
     padding-bottom: 110px;
-    p {
-        padding-bottom: 10px;
-        font-size: 16px;
-    }
-    .title__name {
-      margin-bottom: 0;
-       padding-bottom: 50px;
-    }
+}
+.hero__text .text {
+    padding-bottom: 10px;
+}
+.title__name {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+.hero__comment-text {
+  font-style:italic;
 }

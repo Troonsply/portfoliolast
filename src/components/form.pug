@@ -5,20 +5,20 @@
             .form__block
                 label.form__block-title(for='name') Введите ваше имя
                     .form__input
-                        +icon(`User`,'feedback-icon')
+                        +icon(`User`,'form-icon')
                         input.form__block-input(type='text', id='name', name='name', placeholder="Ковальчук Дмитрий", required='')
                     .error
             .form__block
                 label.form__block-title(for='email') Введите ваш email
                     .form__input
-                        +icon(`Envelope`,'feedback-icon')
+                        +icon(`Envelope`,'form-icon')
                         input.form__block-input(type='text', id='email', name='email', placeholder="loftschool@study.com", required='')
                     .error
         .form__row
             .form__block
                 label.form__block-title(for='comment') Сообщение к письму
                     .form__input
-                        +icon(`Chat`,'feedback-icon')
+                        +icon(`Chat`,'form-icon')
                         textarea.form__block-input.form__block-input-textarea(type='text', id='comment', name='comment', placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса", required='')
                     .error
         .form__confirm
