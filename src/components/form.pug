@@ -1,27 +1,25 @@
-section.form
-    .container.container-form
-        h2.section-title.section-title__form Связаться со мной
-        form.form(action="#")
-            form.form(action="#")
-                .form__row
-                    .form__block
-                        label.form__block-title(for='name') Введите ваше имя
-                        .input
-                            +icon(`User`,'feedback-icon')
-                            input.form__block-input(type='text', id='name', name='name', placeholder="Ковальчук Дмитрий", required='')
-                        .error
-                    .form__block
-                        label.form__block-title(for='email') Введите ваш email
-                        .input
-                            +icon(`Envelope`,'feedback-icon')
-                            input.form__block-input(type='text', id='email', name='email', placeholder="loftschool@study.com", required='')
-                        .error
-                .form__row
-                    .form__block
-                        label.form__block-title(for='comment') Сообщение к письму
-                        .input
-                            +icon(`Chat`,'feedback-icon')
-                            textarea.form__block-input.form__block-input-textarea(type='text', id='comment', name='comment', placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса", required='')
-                        .error
-                .form__confirm
-                    button#send.btn.form__confirm-btn(type='submit') Отправить
+.container.form-container
+    h2.title.form-title Связаться со мной
+    form.form(action="#")
+        .form__row
+            .form__block
+                label.form__block-title(for='name') Введите ваше имя
+                    .form__input
+                        +icon(`User`,'form-icon')
+                        input.form__block-input(type='text', id='name', name='name', placeholder="Ковальчук Дмитрий", required='')
+                    .error
+            .form__block
+                label.form__block-title(for='email') Введите ваш email
+                    .form__input
+                        +icon(`Envelope`,'form-icon')
+                        input.form__block-input(type='text', id='email', name='email', placeholder="loftschool@study.com", required='')
+                    .error
+        .form__row
+            .form__block
+                label.form__block-title(for='comment') Сообщение к письму
+                    .form__input
+                        +icon(`Chat`,'form-icon')
+                        textarea.form__block-input.form__block-input-textarea(type='text', id='comment', name='comment', placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса", required='')
+                    .error
+        .form__confirm
+            button#send.btn.form__confirm-btn(type='submit') Отправить

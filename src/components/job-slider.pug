@@ -1,8 +1,9 @@
-mixin slider(slidesNum)
+mixin slider(slidesnum)
   ul.slider-list
-    - for(var i = 0; i < slidesNum.length; i++)
-      li.slider-list__item(data-slide=`${slidesNum[i]}`)
-        +image(`content/portfolio/project-${slidesNum[i]}.jpg`, 'slider-list__item-pic', 'img', 'Project')
+    - for(var i = 0; i < slidesnum.length; i++)
+      li.slider-list__item(data-slide=`${slidesnum[i]}`)
+        button.slider-list__btn(type="button")
+          +image(`content/portfolio/project-${slidesnum[i]}.jpg`, 'slider-list__item-pic', 'img', 'Project')
 .slider-wrap
   .slider
     +image('content/portfolio/project-preview.jpg', 'slider__preview', 'img', 'Project Preview')
@@ -12,14 +13,14 @@ mixin slider(slidesNum)
         +icon('short_arrow', 'slider__arrow-svg slider__arrow-svg-prev')
       button.slider__switch(class="slider__switch-next")
         +icon('short_arrow', 'slider__arrow-svg slider__arrow-svg-next slider__arrow-svg--denied')
-    .desc-wrap
-        .desc
-            ul.code-link-list
-                li.code-link-list__item HTML
-                li.code-link-list__item CSS
-                li.code-link-list__item Javacript
-            .desc-content
-                h4.desc__title Сайт школы образования
-                .desc__info Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                a.desc-link Посмотреть сайт
-                    +icon('Link', 'desc-link__svg')
+    .slider-desc__wrap
+        .slider-desc
+            ul.slider-desc__list
+                li.slider-desc__item HTML
+                li.slider-desc__item CSS
+                li.slider-desc__item Javacript
+            .slider-desc__content
+                h4.slider-desc__title Сайт школы образования
+                .slider-desc__info Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                a.slider-desc__link(href="#") Посмотреть сайт
+                    +icon('Link', 'slider-desc__link__svg')
