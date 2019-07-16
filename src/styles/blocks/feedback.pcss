@@ -1,9 +1,9 @@
 .feedback {
-    background-image: url("../images/parallax/budda.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 50px;
-    position: relative;
+  background-image: url("../images/parallax/budda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  position: relative;
 }
 .feedback-container {
   display: flex;
@@ -18,39 +18,32 @@
   margin-left: 8%;
 }
 .feedback-arrow__prev, .feedback-arrow__next {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top:15%;
-    left: 43%;
-    cursor: pointer;
-    border: 1px solid $text-color;
-    transition: border-color .3s;
-  }
-.feedback-arrow__prev {
-    transform: rotate(180deg);
-    &:hover {
-      border-color: #596478;
-      transition: border-color .3s;
-      .arrow__btn--prev {
-      fill: #596478;
-      transition: fill .3s;
-    }
-  }
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:15%;
+  left: 43%;
+  cursor: pointer;
+  border: 1px solid $text-color;
+  transition: border-color .3s;
 }
- .feedback-arrow__next {
-    left: 49%;
-    &:hover {
-      border-color: #596478;
-      transition: border-color .3s;
-      .arrow__btn--next {
-      fill: #596478;
-      transition: fill .3s;
-    }
-  }
+.feedback-arrow__prev {
+  transform: rotate(180deg);
+}
+.feedback-arrow__prev:hover {
+  border-color: #596478;
+  transition: border-color .3s;
+}
+
+.feedback-arrow__next {
+  left: 49%;
+}
+.feedback-arrow__next:hover {
+  border-color: #596478;
+  transition: border-color .3s;
 }
