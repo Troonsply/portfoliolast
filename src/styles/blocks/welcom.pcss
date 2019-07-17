@@ -11,25 +11,56 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+      @include desktop {
+        padding: 0 10%;
+  }
 }
 .welcome-title {
     display: flex;
     flex-flow: column;
     font-size: 72px;
     color:#414c63;
-    font-weight: 500;
+    font-weight: 800;
     text-align: center;
     line-height: 100%;
     padding-top: 30%;
     padding-bottom: 30%;
+    @include desktop() {
+        display: flex;
+        text-align: left;
+        flex-flow: row;
+  }
+  @include tablets() {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .welcome-title__text {
     font-size: 18px;
-    color:#414c63;
-    opacity: 0.8;
-    font-weight: 400;
+    color:#abb4be;
+    font-weight: 600;
     text-align: center;
     line-height: normal;
+    @include desktop() {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: 8px;
+        padding-right: 60px;
+  }
+    @include tablets() {
+        text-align: center;
+        margin-right: 0;
+  }
+    @include phones() {
+        font-size: 14px;
+        padding: 0 10%;
+  }
+}
+.welcome-title__name {
+    @include phones() {
+    font-size: 36px;
+  }
 }
 .welcome-scroll {
     position: absolute;
@@ -38,12 +69,22 @@
     align-items: center;
     bottom: 15%;
     width: 100%;
+    @include tablets() {
+        display: none;
+  }
 }
 .welcome__scroll-link {
     font-size: 18px;
     color:#414c63;
     font-weight: 600;
     text-decoration: none;
+
+        &:hover {
+    color: #8500ef;
+  }
+    &:hover > .welcome__scroll-svg {
+    fill: #8500ef;
+  }
 }
 .welcome__scroll-svg {
     width: 28px;

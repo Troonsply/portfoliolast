@@ -1,9 +1,13 @@
 .header-container {
-    display:flex;
-    flex-flow: row;
-    justify-content:space-between;
-    padding-top: 3%;
-    align-items: center;
-    height: 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+  @include tablets() {
+    .menu {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
 }
-
