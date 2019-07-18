@@ -1,13 +1,23 @@
 .form-container {
   max-width: 50%;
   margin-left: 130px;
+    @include phones() {
+    max-width: 100%;
+    margin:0 auto;
+  }
 }
 .form-title {
   padding-top: 200px;
+  @include phones() {
+    padding-top:160px;
+  }
 }
 .form__row {
   display: flex;
   margin-bottom: 40px;
+  @include phones() {
+    flex-flow: column;
+  }
 }
 .form__block {
   flex: 1;
@@ -19,6 +29,11 @@
   &:last-child {
     margin-right: 0;
   }
+  @include phones(){
+    margin-right: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
 }
 .form__block:focus {
   border-bottom: 1px solid #5500f2;
@@ -28,25 +43,36 @@
   height: 30px;
   fill: #414c63;
   opacity: 0.5;
+  @include phones(){
+    display: none;
+  }
 }
 .form__block-input {
   background: transparent;
   border: none;
-  color: #414c63;
+  color: $text-color;
   outline: none;
   padding: 20px 1rem;
   width: 100%;
 
   &::-webkit-input-placeholder {
-    color: #414c63;
     font-size: 18px;
     font-weight: 700;
+    line-height: 24px;
+    @include phones(){
+      font-size: 14px;
+      text-align: center;
+    }
   }
 }
 .form__block-title {
   font-weight: 600;
   margin-left: 50px;
-  opacity: 0.8;
+  opacity: 0.4;
+  @include phones() {
+    font-size: 14px;
+    margin-left: 0;
+  }
 }
 .form__block-input-textarea {
   resize: vertical;
@@ -67,9 +93,15 @@
   border-color: transparent;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+    @include phones(){
+    width: 100%;
+  }
 }
 
 .form__input {
   display: flex;
   align-items: center;
+  @include phones(){
+    color: black;
+  }
 }

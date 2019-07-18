@@ -3,12 +3,34 @@
     align-items: flex-start;
     width: 70%;
     margin-left: 170px;
-    
+    @include tablets() {
+      width: 100%;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    @include phones(){
+    margin-left: 0;
+     overflow: hidden;
+  }
 }
 .reviews__slider-item {
     display: flex;
     margin-top: 50px;
     width:60%;
+    will-change: transform;
+
+    @include tablets() {
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include phones() {
+      width: 100%;
+      padding-left: 15%;
+        &:last-child {
+      display:none;
+    }
+    }
 }
 
 .reviews__icon {
@@ -17,7 +39,9 @@
     fill: #676f82;
     opacity: 0.1;
     margin-right: 30px;
-
+    @include phones(){
+    display:none;
+  }
 }
 .reviews__text {
     margin-bottom: 30px;
@@ -26,6 +50,7 @@
     color: #414c63;
     margin-top: 0;
     margin-left: 0;
+    line-height: 24px;
 }
 .reviews__content {
     display: flex;

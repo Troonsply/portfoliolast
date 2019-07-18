@@ -3,6 +3,9 @@
   width: 100%;
   display: flex;
   position: relative;
+  @include phones() {
+    margin-top: 0;
+  }
 }
 .slider {
   display: flex;
@@ -10,7 +13,9 @@
   position: relative;
   z-index: 4;
   height: 550px;
-
+  @include phones() {
+    flex-flow: column;
+  }
   @include tablets() {
     margin-bottom: 105px;
     width: 86%;
@@ -37,12 +42,17 @@
     width: 100%;
     height: auto;
     margin-bottom: 60px;
-    object-fit: cover;
     &:before {
       display: none;
     }
   }
 } 
+.slider__preview {
+ 
+  @include phones() {
+  object-fit: contain;
+  }
+}
 .slider-list {
   position: absolute;
   right: 0;
@@ -85,8 +95,8 @@
   display: flex;
   
   @include phones() {
-    bottom: 0;
     z-index: 2;
+    top: 21.3%;
   }
 }
 .slider__switch {
@@ -101,8 +111,8 @@
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #5500f2;
-    transition: background-color 0.2s;
+    border: #5500f2;
+    transition: border 0.2s;
   }
 }
 .slider__switch:hover .slider__arrow-svg {
@@ -131,6 +141,9 @@
   position: relative;
   width: 34%;
   display: flex;
+    @include phones() {
+      width: 100%;
+  }
 
   &:before {
     content: '1';
@@ -142,6 +155,9 @@
     font-size: 400px;
     font-weight: 800;
     line-height: 473px;
+    @include phones() {
+      display: none;
+    }
   }
 }
 
@@ -172,6 +188,9 @@
 }
 .slider-desc {
   padding-left: 11.2rem;
+  @include phones() {
+    padding: 65px 50px;
+  }
 }
 .slider-desc__content {
   height: 295px;
@@ -196,6 +215,7 @@
   padding-left: 35px;
   position: relative;
   color: #4b6fd7;
+  text-decoration: none;
 
   &:hover {
     color: #414c63;

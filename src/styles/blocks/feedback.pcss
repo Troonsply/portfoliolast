@@ -10,12 +10,28 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+    @include tablets() {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include phones() {
+      margin-bottom: 50px;
+    }
 }
 .feedback__title {
   display: flex;
   align-items: flex-start;
   padding-top: 13%;
-  margin-left: 8%;
+  margin-right: 8%;
+  @include phones(){
+    align-items: center;
+    margin:0 auto;
+    padding-top: 15%;
+  }
+}
+.feedback-arrow {
+  display: flex;
+  justify-content: center;
 }
 .feedback-arrow__prev, .feedback-arrow__next {
   position: absolute;
@@ -26,11 +42,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top:15%;
+  top:11%;
   left: 43%;
   cursor: pointer;
   border: 1px solid $text-color;
   transition: border-color .3s;
+  @include phones(){
+    left:30%;
+    top:8%;
+  }
 }
 .feedback-arrow__prev {
   transform: rotate(180deg);
