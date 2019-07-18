@@ -1,5 +1,6 @@
 # Буслова Екатерина
 # Прохождение курса:06.2019
+# GP https://troonsply.github.io/portfoliolast/.
 
 
 Учебный шаблон проекта Portfolio
@@ -7,7 +8,7 @@
 
 Чтобы развернуть проект необходимо:
 ```sh
-$ git clone https://troonsply.github.io/portfolio/.
+$ git clone https://github.com/Troonsply/portfoliolast
 $ cd portfolio
 $ yarn
 ```

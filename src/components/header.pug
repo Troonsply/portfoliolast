@@ -1,7 +1,9 @@
 header.header
-    include logo
-    include menu
-    include socials
-    +socials('header')
+    .container.header-container
+        include logo
+        include menu
+        +menu('header')
+        include socials
+        +socials('header')
 
             

@@ -1,0 +1,81 @@
+.skills {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skills-container {
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: url('../images/decorative/bag.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    height: 60%;
+    width: 40%;
+    bottom:20%;
+  }
+}
+.skills-title {
+  font-size: 30px;
+}
+.skills__content {
+  width: 48%;
+  margin: 0 auto 5.125rem;
+}
+
+.skills__user {
+  display: flex;
+ justify-content: center;
+ margin-left: 50px;
+  @include tablets {
+    margin-top: 50px;
+    justify-content: center;
+  }
+}
+.skills__item-title {
+  font-size: 20px;
+  color: #414c63;
+  font-weight: 700;
+}
+.skills-diagram__list {
+  display: flex;
+  align-items: center;
+}
+.skills-diagram__item {
+  position: relative;
+}
+.skill {
+  width: 10.375rem;
+  height: 10.375rem;
+  transform: rotate(-180deg);
+  fill: transparent;
+  position: relative;
+}
+.skill__circle {
+    fill: transparent;
+  }
+.skill__circle_under {
+    stroke: #eaeaea;
+    stroke-width: 0.3125rem;
+  }
+.skill__circle_above {
+    stroke-width: 0.60rem;
+    stroke-dasharray: 288;
+    stroke-dashoffset: 100;
+  }
+.skill__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color;
+    opacity: .7;
+  }

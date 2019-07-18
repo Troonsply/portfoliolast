@@ -1,23 +1,19 @@
-section.hero
-    .container
+section.hero#hero
+    .container.hero-container
         .hero__face
             .hero__avatar
-                +image('content/user.jpg', 'user-pic')
+                +image('content/user/user.jpg', 'user-pic')
             .hero__data
-                table
-                    - var data=[['Проживаю'.'Санкт-Петербург'],['Возраст'.'26 лет'],['Родилась'.'5 ноября 1992']];
+                table.hero__desc
+                    - var data=[['Проживаю:','Санкт-Петербург'],['Возраст:','26 лет'],['Родилась:','5 ноября 1992']];
                     each row in data
                         tr
-                            td #{row[0]}
-                            td #{row[1]}
-                            td #{row[2]}
+                            td.hero__desc-title #{row[0]}
+                            td.hero__desc-text #{row[1]}
         .hero__content
-            h3
-                p.hero__welcom Привет, меня зовут
-                p.hero__name Буслова Катерина
-                p.hero__text.text 
-                    p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.Чуть позже я освежу свой контент.А пока посмотрите как тут все классно и красиво!
-                //- section.benefit
-                //- h2.benefit-skill__title Чем я могу быть полезна вам
-                //- p.benefit-skill__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.Чуть позже я освежу свой контент.А пока посмотрите как тут все классно и красиво!
+            .hero__text
+                p.text Привет, меня зовут
+                h2.title.title__name Буслова Катерина
+                p.text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты
+            .hero__comment
+                p.text.hero__comment-text Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool.Чуть позже я освежу свой контент.А пока посмотрите как тут все классно и красиво!
