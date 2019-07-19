@@ -4,6 +4,8 @@
   background-size: cover;
   padding-bottom: 50px;
   position: relative;
+  min-height: 1400px;
+  max-height: 1400px;
 }
 .feedback-container {
   display: flex;
@@ -23,6 +25,10 @@
   align-items: flex-start;
   padding-top: 13%;
   margin-right: 8%;
+  @include tablets(){
+    padding-top: 18%;
+    margin-left: 10%;
+  }
   @include phones(){
     align-items: center;
     margin:0 auto;
@@ -47,6 +53,9 @@
   cursor: pointer;
   border: 1px solid $text-color;
   transition: border-color .3s;
+  @include tablets(){
+    margin-left: 10%;
+  }
   @include phones(){
     left:30%;
     top:8%;

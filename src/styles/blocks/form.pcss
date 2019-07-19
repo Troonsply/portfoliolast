@@ -1,6 +1,10 @@
 .form-container {
   max-width: 50%;
   margin-left: 130px;
+  @include tablets(){
+    max-width: 75%;
+    margin:0 auto;
+  }
     @include phones() {
     max-width: 100%;
     margin:0 auto;
@@ -8,6 +12,11 @@
 }
 .form-title {
   padding-top: 200px;
+  @include tablets(){
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 125px;
+  }
   @include phones() {
     padding-top:160px;
   }
@@ -69,6 +78,9 @@
   font-weight: 600;
   margin-left: 50px;
   opacity: 0.4;
+  @include tablets() {
+    margin-left: 0;
+  }
   @include phones() {
     font-size: 14px;
     margin-left: 0;
@@ -78,6 +90,12 @@
   resize: vertical;
   width: 100%;
   line-height: 1.7em;
+}
+.form__confirm {
+  @include tablets() {
+    display: flex;
+    justify-content: center;
+  }
 }
 .form__confirm-btn {
   width: 40%;
@@ -93,7 +111,11 @@
   border-color: transparent;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
-    @include phones(){
+  @include tablets(){
+    width: 60%;
+
+  }
+  @include phones(){
     width: 100%;
   }
 }
