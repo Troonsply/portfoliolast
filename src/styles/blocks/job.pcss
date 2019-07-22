@@ -7,8 +7,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-    @include phones() {
-      width: 100%;
+  @include tablets() {
+    padding: 55px 0;
+  }
+  @include phones() {
+    width: 100%;
   }
 }
 .job-title {

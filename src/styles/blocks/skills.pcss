@@ -54,7 +54,7 @@
     margin-left: 0;
   }
   @include tablets() {
-    width: 68%;
+    width: 52%;
     text-align: center;
   }
   @include phones() {
@@ -63,10 +63,23 @@
     text-align: left;
   }
 }
+.skills__item {
+
+  @include tablets(){
+    padding-bottom: 30px;
+  }
+  @include phones(){
+    padding-bottom: 0;
+  }
+}
 .skills__item-title {
   font-size: 20px;
   color: #414c63;
   font-weight: 700;
+  @include tablets() {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
   @include phones() {
     text-align: center;
     padding-bottom: 10px;
@@ -76,13 +89,14 @@
   display: flex;
   justify-content: flex-end;
   @include tablets() {
+  margin: 0 auto;
   justify-content: center;
   }
 }
 .skills__user-container {
   width: 66%;
   @include tablets() {
-  width: 95%;
+  width: 100%;
   }
 }
 .skills-diagram__list {
@@ -100,6 +114,7 @@
   position: relative;
     @include tablets() {
     margin-left: 0;
+    padding-left: 30px;
   }
   @include phones() {
     justify-content: center;
@@ -138,4 +153,7 @@
   font-weight: 700;
   color: $text-color;
   opacity: .7;
+  @include tablets() {
+    padding-left: 30px;
+  }
 }
