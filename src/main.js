@@ -4,4 +4,4 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import './scripts/mobile-menu';
-// import "./scripts/job";
+import './scripts/skills';
