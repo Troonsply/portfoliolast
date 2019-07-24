@@ -1,12 +1,9 @@
 .parallax {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 950px;
-  z-index: -100;
-  overflow: hidden;
+  right: 0;
 
   @include tablets() {
     display: none;
@@ -14,30 +11,31 @@
 }
 
 .parallax__img {
+  max-width: initial;
+  max-height: initial;
   position: absolute;
-  object-fit: cover;
-  object-position: center;
 }
 
 .parallax__item {
-  position: absolute;
-  left: 0;
+position: absolute;
   top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  will-change: transform;
   &:nth-child(1) {
+    display: block;
     .parallax__img {
       object-fit: cover;
       width: 100%;
-      height: 100%;
     }
   }
   &:nth-child(2) {
+    display: block;
     .parallax__img {
       right: 0;
       top: 17%;
-      width: 100%;
-      height: 100%;
 
       @include desktop() {
         top: 22%;
@@ -45,12 +43,12 @@
     }
   }
   &:nth-child(3) {
+    display: block;
     .parallax__img {
       left: 50%;
       top: 28%;
       margin-left: 16%;
       max-width: 195px;
-      width: 100%;
 
       @include desktop() {
         margin-left: 0;
@@ -72,6 +70,7 @@
     }
   }
   &:nth-child(4) {
+    display: block;
     .parallax__img {
       left: 0;
       top: 30%;
@@ -82,6 +81,7 @@
     }
   }
   &:nth-child(5) {
+    display: block;
     .parallax__img {
       left: 0;
       bottom: 13%;
@@ -98,12 +98,14 @@
     }
   }
   &:nth-child(6) {
+    display: block;
     .parallax__img {
       right: 0;
       bottom: -5%;
     }
   }
   &:nth-child(7) {
+    display: block;
     .parallax__img {
       bottom: 0;
       left: 0;
@@ -111,7 +113,7 @@
   }
 }
 
-.parallax_buda {
+/* .parallax_buda {
   .parallax__item {
     &:nth-child(2) {
       .parallax__img {
@@ -158,4 +160,4 @@
       }
     }
   }
-}
+} */
