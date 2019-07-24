@@ -8,10 +8,10 @@ script(type="text/x-template")#skills-row
     .skills__row
         h3.skills__item-title {{skill.skillsGroup}}
         ul.skills-diagram__list
-            li.skills-diagram__item(v-for="(skillPercents, skillName) in skill.skills")
+            li.skills-diagram__item(v-for="(skillPercent, skillName) in skill.skills")
                 skill(
                     :skillName="skillName"
-                    :skillPercents="skillPercents"
+                    :skillPercent="skillPercent"
                 )
 script(type="text/x-template")#skill
     .skill
