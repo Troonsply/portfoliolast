@@ -1,18 +1,18 @@
 script(type="text/x-template")#skills-list
     ul.skills__list 
         li.skills__item(v-for="skill in skills")
-            row(
-        :skill="skill"
-    )
-    script(type="text/x-template")#skills-row
-        .skills__row
-            h3.skills__item-title {{skill.skillsGroup}}
-            ul.skills-diagram__list
-                li.skills-diagram__item(v-for="(skillPercents, skillName) in skill.skills")
-                    skill(
-          :skillName="skillName"
-          :skillPercents="skillPercents"
-        )
+            skillsRow(
+                :skill="skill"
+            )
+script(type="text/x-template")#skills-row
+    .skills__row
+        h3.skills__item-title {{skill.skillsGroup}}
+        ul.skills-diagram__list
+            li.skills-diagram__item(v-for="(skillPercents, skillName) in skill.skills")
+                skill(
+                    :skillName="skillName"
+                    :skillPercents="skillPercents"
+                )
 script(type="text/x-template")#skill
     .skill
         svg(viewBox="0 0 100 100").skill__circle-shape
