@@ -117,16 +117,20 @@
   transition: background-color 0.2s;
 
   &:hover {
-    border: #5500f2;
+    border: $violet;
     transition: border 0.2s;
+  }
+  &:focus {
+    border: 1px solid $violet;
   }
 }
 .slider__switch:hover .slider__arrow-svg {
-  fill: #5500f2;
+  fill: $violet;
   transition: fill 0.2s;
 }
 .slider__switch:hover .slider__arrow-svg--denied {
-  fill: #2b3948;
+  fill: $violet;
+  transition: fill 0.2s;
 }
 .slider__arrow-svg {
   width: 10px;
@@ -139,10 +143,7 @@
 .slider__arrow-svg-next {
   transform: rotate(90deg)
 }
-.slider__arrow-svg--denied {
-  fill: #858b97;
-  transition: fill 0.2s;
-}
+
 .slider-desc__wrap {
   position: relative;
   width: 34%;

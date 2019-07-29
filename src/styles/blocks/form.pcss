@@ -43,10 +43,11 @@
     margin-bottom: 50px;
     text-align: center;
   }
+  &:focus {
+    border-bottom:5px solid $violet;
+  }
 }
-.form__block:focus {
-  border-bottom: 1px solid #5500f2;
-}
+
 .form-icon {
   width: 32px;
   height: 30px;
@@ -60,7 +61,6 @@
   background: transparent;
   border: none;
   color: $text-color;
-  outline: none;
   padding: 20px 1rem;
   width: 100%;
 
@@ -73,6 +73,7 @@
       text-align: center;
     }
   }
+
 }
 .form__block-title {
   font-weight: 600;

@@ -18,12 +18,18 @@
 }
 .menu__item {
   font-size: 16px;
-  padding-right: 9%;
+  padding-right: 63px;
   
   &:last-child {
     padding-right: 0; 
   }
-    @include tablets() {
+  @include desktop() {
+    padding-right: 57px;
+  &:last-child {
+    padding-right: 0; 
+  }
+  }
+  @include tablets() {
     padding-right: 10%;
     padding-bottom: 2%;
   
@@ -40,4 +46,5 @@
 .menu__link:hover {
   color: white;
   border-bottom: 2px solid #ffffff;
+  transition: 0.4s;
 }
