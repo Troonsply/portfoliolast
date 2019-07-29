@@ -3,17 +3,55 @@
   width: 100%;
   display: flex;
   position: relative;
+  @include phones() {
+    margin-top: 0;
+  }
 }
 .slider {
-  position: relative;
-  width: 66%;
-  height: 550px;
   display: flex;
-}
+  width: 66%;
+  position: relative;
+  z-index: 4;
+  height: 550px;
+  @include tablets() {
+    flex-flow: column;
+  }
+  @include tablets() {
+    margin-bottom: 105px;
+    width: 86%;
+  }
+  &:before {
+    content: attr(data-slide);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    line-height: 1;
+    left: 100%;
+    font-size: 400px;
+    font-weight: 800;
+    margin-left: -8%;
+    color: rgba($text-color, .05);
+    
+    @include desktop() {
+      top: 0;
+      transform: translateY(-15%);
+      margin-left: -11%;
+    }
+  }
+  @include phones() {
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+    &:before {
+      display: none;
+    }
+  }
+} 
 .slider__preview {
-  object-fit: cover;
-  height: 100%;
-  z-index: 1;
+ 
+  @include phones() {
+  object-fit: contain;
+  }
 }
 .slider-list {
   position: absolute;
@@ -21,17 +59,30 @@
   bottom: 0;
   display: flex;
   flex-flow: column;
-  z-index: 1;
+ @include tablets() {
+   top:14%;
+ }
+  @include phones() {
+    display: none;
+  }
 }
 .slider-list__item {
   cursor: pointer;
   width: 178px;
   height: 100px;
   transition: filter 0.3s;
-    &:hover {
-      filter: saturate(300%);
-      transition: filter 0.3s;
-    }
+
+  &:hover {
+    filter: saturate(300%);
+    transition: filter 0.3s;
+  }
+    @include desktop() {
+    width: 144.6px;
+    height: 81px;
+  }
+}
+.slider-list__btn {
+  padding: 0;
 }
 .slider-list__item-pic {
   width: 100%;
@@ -45,6 +96,14 @@
   right: 0;
   bottom: -3.1rem;
   display: flex;
+  @include tablets() {
+    bottom: 17.7%;
+  }
+  
+  @include phones() {
+    z-index: 2;
+    top: 21.3%;
+  }
 }
 .slider__switch {
   position: relative;
@@ -56,10 +115,11 @@
   height: 50px;
   background-color: #414c63;
   transition: background-color 0.2s;
-    &:hover {
-      background-color: #5500f2;
-      transition: background-color 0.2s;
-    }
+
+  &:hover {
+    border: #5500f2;
+    transition: border 0.2s;
+  }
 }
 .slider__switch:hover .slider__arrow-svg {
   fill: #5500f2;
@@ -87,17 +147,31 @@
   position: relative;
   width: 34%;
   display: flex;
-  &::before {
-      content: '1';
-      position: absolute;
-      top: 0;
-      left: -55px;
-      z-index: 0;
-      color: #f0f0f0;
-      font-size: 400px;
-      font-weight: 800;
-      line-height: 473px;
+   @include tablets() {
+     width: 100%;
+     justify-content: center;
+     text-align: center;
+     padding-top: 4rem;
+     margin: 0 4rem;
+   }
+    @include phones() {
+      width: 100%;
+  }
+
+  &:before {
+    content: '1';
+    position: absolute;
+    top: 0;
+    left: -55px;
+    z-index: -2;
+    color: #f0f0f0;
+    font-size: 400px;
+    font-weight: 800;
+    line-height: 473px;
+    @include tablets() {
+      display: none;
     }
+  }
 }
 
 .slide-num {
@@ -111,6 +185,10 @@
 }
 .slider-desc__list {
   display: flex;
+  @include tablets() {
+    padding: 35px 0;
+    justify-content: center;
+  }
 }
 .slider-desc__item {
   background-color: #f2f5f9;
@@ -120,12 +198,20 @@
   font-weight: 400;
   color: #2b3948;
   border-radius: 25px;
-    &:first-child {
-      margin-left: 0;
-    }
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 .slider-desc {
-    padding-left: 11.2rem;
+  padding-left: 11.2rem;
+  @include tablets(){
+    padding-left: 0;
+    width: 75%;
+  }
+  @include phones() {
+    padding: 65px 50px;
+  }
 }
 .slider-desc__content {
   height: 295px;
@@ -133,6 +219,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+    @include tablets(){
+      height: 243px;
+    margin-top: 0;
+  }
 }
 .slider-desc__title {
   color: #414c63;
@@ -150,9 +240,11 @@
   padding-left: 35px;
   position: relative;
   color: #4b6fd7;
-    &:hover {
-      color: #414c63;
-    }
+  text-decoration: none;
+
+  &:hover {
+    color: #414c63;
+  }
 }
 .slider-desc__link:hover .slider-desc__link__svg {
   fill: #414c63;
@@ -165,4 +257,7 @@
   width: 15px;
   height: 15px;
   fill: #4b6fd7;
+  @include tablets() {
+    left: 30%;
+  }
 }

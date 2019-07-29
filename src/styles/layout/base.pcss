@@ -30,7 +30,7 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
+  /* width: 1490px; */
 
   @include phones {
     width: 85%;
@@ -91,13 +91,24 @@ img {
   font-size:16px;
   color:#414c63;
   opacity: 0.7;
+    @include tablets() {
+    font-size: 14px;
+  }
+    @include phones() {
+    font-size: 14px;
+  }
 }
 .title {
   font-size: 36px;
   color: #414c63;
   font-weight: 700;
   margin-bottom: 35px;
-    @include tablets {
+    @include tablets() {
+    text-align: center;
+    font-size: 30px;
+  }
+    @include phones() {
+    font-size: 24px;
     text-align: center;
   }
 }

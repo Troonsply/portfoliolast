@@ -1,10 +1,6 @@
 section.feedback#feedback
     .container.feedback-container
-      button.feedback-arrow__prev(type='button')
-        +icon('short_arrow', 'arrow__btn--prev')
-      button.feedback-arrow__next(type='button')
-        +icon('short_arrow', 'arrow__btn--next')
       .feedback__title
         h2.title.feedback-title Что обо мне говорят
-      include reviews
+      #reviews-slider
       include form

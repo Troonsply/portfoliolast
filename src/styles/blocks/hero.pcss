@@ -1,36 +1,49 @@
 .hero {
-    position: relative;
+  position: relative;
 }
 .hero-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 822px;
-    padding:53px 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 822px;
+  padding:53px 250px;
+  @include desktop() {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+  @include phones() {
+    flex-direction: column;
+    padding-top: 114px;
+    padding-bottom: 114px;
+  }
 }
 .hero__face {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 70px;
-    flex-flow: column;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  flex-flow: column;
+    @include phones(){
+    width: 100%;
+    margin-bottom: 50px;
+  }
 } 
 .hero__avatar {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0px 10px 24px 0 rgba(#000, .3);
-    margin: 80px 75px 80px 75px;
-    flex-shrink: 0;
-    object-fit: cover;
-    object-position: top;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0px 10px 24px 0 rgba(#000, .3);
+  margin: 80px 75px 80px 75px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: top;
 }
 .hero__desc {
   font-weight: 600;
   width: 100%;
 
-    td {
+  td {
     padding-bottom: 15px;
   }
 
@@ -39,12 +52,12 @@
   }
 }
 .hero__desc-title {
-    color:#414c63;
-    opacity: 0.5;
+  color:#414c63;
+  opacity: 0.5;
 }
 .hero__desc-text {
-    color:#414c63;
-    opacity: 1;
+  color:#414c63;
+  opacity: 1;
 }
 .hero__content {
   display: flex;
@@ -52,20 +65,44 @@
   justify-content: space-between;
   width: 56%;
   padding-bottom: 50px;
-  @include phones {
+  @include tablets() {
+    padding-bottom: 0;
+    width: 45%;
+  }
+
+  @include phones() {
     width: 100%;
   }
 }
 .hero__text {
-    padding-bottom: 110px;
+  padding-bottom: 110px;
 }
 .hero__text .text {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
-.title__name {
+.hero-title__name {
+  margin-bottom: 0;
+  padding-bottom: 50px;
+  @include tablets(){
+    text-align:left;
+  }
+}
+.hero__comment {
+  position: relative;
+  font-style: italic;
+  margin-bottom: 36px;
+  @include tablets(){
     margin-bottom: 0;
-    padding-bottom: 50px;
-}
-.hero__comment-text {
-  font-style:italic;
+  }
+  &:before {
+    left: calc(-22px - 30px);
+    position: absolute;
+    display: inline;
+    vertical-align: top;
+    content: '*';
+    color: red;
+    font-size: 48px;
+    line-height: 48px;
+    opacity: 0.1;
+  }
 }

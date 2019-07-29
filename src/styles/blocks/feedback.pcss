@@ -1,56 +1,77 @@
 .feedback {
-    background-image: url("../images/parallax/budda.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 50px;
-    position: relative;
+  background-image: url("../images/parallax/budda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  position: relative;
+  min-height: 1400px;
+  max-height: 1400px;
 }
 .feedback-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+    @include tablets() {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include phones() {
+      margin-bottom: 50px;
+    }
 }
 .feedback__title {
   display: flex;
   align-items: flex-start;
-  padding-top: 13%;
-  margin-left: 8%;
+  padding-top: 10%;
+  @include tablets(){
+    padding-top: 18%;
+    margin-left: 10%;
+  }
+  @include phones(){
+    align-items: center;
+    margin:0 auto;
+    padding-top: 15%;
+  }
+}
+.feedback-arrow {
+  display: flex;
+  justify-content: center;
 }
 .feedback-arrow__prev, .feedback-arrow__next {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top:15%;
-    left: 43%;
-    cursor: pointer;
-    border: 1px solid $text-color;
-    transition: border-color .3s;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:11%;
+  left: 43%;
+  cursor: pointer;
+  border: 1px solid $text-color;
+  transition: border-color .3s;
+  @include tablets(){
+    margin-left: 10%;
   }
-.feedback-arrow__prev {
-    transform: rotate(180deg);
-    &:hover {
-      border-color: #596478;
-      transition: border-color .3s;
-      .arrow__btn--prev {
-      fill: #596478;
-      transition: fill .3s;
-    }
+  @include phones(){
+    left:30%;
+    top:8%;
   }
 }
- .feedback-arrow__next {
-    left: 49%;
-    &:hover {
-      border-color: #596478;
-      transition: border-color .3s;
-      .arrow__btn--next {
-      fill: #596478;
-      transition: fill .3s;
-    }
-  }
+.feedback-arrow__prev {
+  transform: rotate(180deg);
+}
+.feedback-arrow__prev:hover {
+  border-color: #596478;
+  transition: border-color .3s;
+}
+
+.feedback-arrow__next {
+  left: 49%;
+}
+.feedback-arrow__next:hover {
+  border-color: #596478;
+  transition: border-color .3s;
 }

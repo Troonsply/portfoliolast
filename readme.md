@@ -9,7 +9,7 @@
 Чтобы развернуть проект необходимо:
 ```sh
 $ git clone https://github.com/Troonsply/portfoliolast
-$ cd portfolio
+$ cd portfoliolast
 $ yarn
 ```
 
