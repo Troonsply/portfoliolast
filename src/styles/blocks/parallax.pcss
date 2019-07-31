@@ -5,19 +5,18 @@
   left: 0;
   right: 0;
   z-index: -100;
+
+  @include desktopbg() {
+    display: none;
+  }
+
   @include tablets() {
     display: none;
   }
 }
 
-.parallax__img {
-  max-width: initial;
-  max-height: initial;
+.parallax__layer {
   position: absolute;
-}
-
-.parallax__item {
-position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -26,138 +25,69 @@ position: absolute;
   will-change: transform;
   &:nth-child(1) {
     display: block;
-    .parallax__img {
+    .parallax__image {
       object-fit: cover;
       width: 100%;
+      height: 100%;
     }
   }
   &:nth-child(2) {
+    /* transform: translateZ(-50px) scale(1.5); */
     display: block;
-    .parallax__img {
+    .parallax__image {
+      top: 360px;
       right: 0;
-      top: 17%;
-
-      @include desktop() {
-        top: 22%;
-      }
+      width: 100%;
     }
   }
   &:nth-child(3) {
+    /* transform: translateZ(-100px) scale(2); */
     display: block;
-    .parallax__img {
-      left: 35%;
-      top: 38%;
-      margin-left: 16%;
-      max-width: 195px;
-
-      @include desktop() {
-        margin-left: 0;
-        right: 0%;
-        left: auto;
-        max-width: 190px;
-        top: 27.5%;
-      }
-
-      @include tablets() {
-        max-width: 150px;
-      }
-
-      @include phones() {
-        right: -12%;
-        max-width: 140px;
-        text-outline: 28%;
-      }
+    .parallax__image {
+      left: 50%;
+      top: 518px;
+      transform: translateX(367px);
     }
   }
   &:nth-child(4) {
+    /* transform: translateZ(-150px) scale(2.5); */
     display: block;
-    .parallax__img {
+    .parallax__image {
       left: 0;
-      top: 33%;
-
-      @include tablets() {
-        top: 36%;
-      }
+      width: 100%;
+      top: 610px;
     }
   }
   &:nth-child(5) {
+    /* transform: translateZ(-200px) scale(3); */
     display: block;
-    .parallax__img {
+    .parallax__image {
       left: 0;
-      bottom: 13%;
-      max-width: 1200px;
-      width: 100%;
-
-      @include desktop() {
-        left: -14%;
-      }
-
-      @include tablets() {
-        bottom: 15%;
-      }
+      top: 610px;
     }
   }
   &:nth-child(6) {
     display: block;
-    .parallax__img {
+    /* transform: translateZ(-250px) scale(3.5); */
+    .parallax__image {
       right: 0;
-      bottom: -5%;
+      top: 416px;
+      bottom: 0;
     }
   }
   &:nth-child(7) {
     display: block;
-    .parallax__img {
-      bottom: 0;
+    /* transform: translateZ(-300px) scale(4); */
+    .parallax__image {
       left: 0;
+      width: 100%;
+      bottom: 0px;
     }
   }
 }
 
-/* .parallax_buda {
-  .parallax__item {
-    &:nth-child(2) {
-      .parallax__img {
-        top: 30%;
-      }
-    }
-    &:nth-child(3) {
-      .parallax__img {
-        left: 50%;
-        top: auto;
-        width: 100%;
-        max-width: 675px;
-        margin-left: 10%;
-        bottom: -38%;
-
-        @include desktop() {
-          margin-left: 15%;
-          bottom: -34%;
-        }
-      }
-    }
-    &:nth-child(4) {
-      .parallax__img {
-        top: auto;
-        bottom: 0;
-        height: 55%;
-
-        @include tablets() {
-          height: 37%;
-        }
-      }
-    }
-    &:nth-child(5) {
-      .parallax__img {
-        bottom: 0;
-        left: auto;
-        right: 0;
-        height: 45%;
-      }
-    }
-    &:nth-child(6) {
-      .parallax__img {
-        bottom: 0;
-      }
-    }
-  }
-} */
+.parallax__image {
+  max-width: initial;
+  max-height: initial;
+  position: absolute;
+}

@@ -7,6 +7,7 @@ import './scripts/mobile-menu';
 import './scripts/skills';
 import './scripts/parallax';
 import './scripts/reviews';
+import './scripts/scroll';
 import Validate from './scripts/form';
 
 const form = document.querySelector('.j-form');
