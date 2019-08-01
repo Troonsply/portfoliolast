@@ -11,7 +11,7 @@ script(type="text/x-template")#slider-template
         )
 script(type="text/x-template")#sliderDisplay-template
     .slider
-        img(:src='currentProject.photo' alt = 'Превью проекта Бусловой Екатерины портфолио').slider__preview
+        img(:src='currentProject.photo' alt = 'Скрины проекта Бусловой Екатерины портфолио').slider__preview
         sliderList(
             :sliderData='sliderData'
             :currentProject='currentProject'
@@ -29,7 +29,7 @@ script(type="text/x-template")#sliderList-template
             :class="{sliderListItemActive: item.id === currentProject.id}"
             @click="$emit('choose', item.id - 1)"
         )
-            img(:src='item.photo' alt="Проект Бусловой Екатерины портфолио").slider__list-item-pic
+            img(:src='item.photo' alt="Скрины проекта Бусловой Екатерины портфолио").slider__list-item-pic
 script(type="text/x-template")#sliderSwitch-template
     .slider__switch-wrap
         button(@click="$emit('slide', 'next')" class="slider__switch-next" type="button").slider__switch

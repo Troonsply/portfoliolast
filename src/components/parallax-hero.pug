@@ -3,4 +3,4 @@ section.parallax
         .parallax__layer
             picture
                 source(srcset=require(`images/parallax/${i}_2560.${i === 1 ? 'jpg' : 'png'}`) media="(min-width: 1920px)").parallax__image
-                img(srcset=require(`images/parallax/${i}.${i === 1 ? 'jpg' : 'png'}`)).parallax__image
+                img(srcset=require(`images/parallax/${i}.${i === 1 ? 'jpg' : 'png'}`) :alt="Элемент parallax").parallax__image
