@@ -23,7 +23,7 @@ script(type="text/x-template")#sliderDisplay-template
 script(type="text/x-template")#sliderList-template
     .slider__list-wrap 
         .slider__list
-            button.slider__list-item(
+            button.slider__item(
                 type="button"
                 v-for='item in sliderData'
                 :class="{sliderListItemActive: item.id === currentProject.id}"
