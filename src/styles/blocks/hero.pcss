@@ -38,6 +38,9 @@
   flex-shrink: 0;
   object-fit: cover;
   object-position: top;
+  @include phones(){
+    margin: 5rem 2.6875rem;
+  }
 }
 .hero__desc {
   font-weight: 600;
@@ -73,10 +76,14 @@
 
   @include phones() {
     width: 100%;
+    padding-left: 0;
   }
 }
 .hero__text {
   padding-bottom: 110px;
+    @include tablets(){
+    font-size: 18px;
+  }
 }
 .hero__text .text {
   padding-bottom: 10px;
@@ -94,6 +101,7 @@
   margin-bottom: 36px;
   @include tablets(){
     margin-bottom: 0;
+    font-size: 18px;
   }
   &:before {
     left: calc(-22px - 30px);

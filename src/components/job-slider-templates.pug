@@ -23,13 +23,13 @@ script(type="text/x-template")#sliderDisplay-template
 script(type="text/x-template")#sliderList-template
     .slider__list-wrap 
         .slider__list
-        button.slider__list-item(
-            type="button"
-            v-for='item in sliderData'
-            :class="{sliderListItemActive: item.id === currentProject.id}"
-            @click="$emit('choose', item.id - 1)"
-        )
-            img(:src='item.photo' alt="Скрины проекта Бусловой Екатерины портфолио").slider__list-item-pic
+            button.slider__list-item(
+                type="button"
+                v-for='item in sliderData'
+                :class="{sliderListItemActive: item.id === currentProject.id}"
+                @click="$emit('choose', item.id - 1)"
+            )
+                img(:src='item.photo' alt="Скрины проекта Бусловой Екатерины портфолио").slider__list-item-pic
 script(type="text/x-template")#sliderSwitch-template
     .slider__switch-wrap
         button(@click="$emit('slide', 'next')" class="slider__switch-next" type="button").slider__switch
