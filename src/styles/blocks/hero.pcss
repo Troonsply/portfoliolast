@@ -2,6 +2,9 @@
   position: relative;
   min-height: 822px;
   max-height: 822px;
+  @include phones(){
+    max-height: none;
+  }
 }
 .hero__container {
   display: flex;
@@ -14,8 +17,8 @@
   }
   @include phones() {
     flex-direction: column;
-    padding-top: 114px;
     padding-bottom: 114px;
+    margin-top: 0;
   }
 }
 .hero__face {

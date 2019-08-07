@@ -30,6 +30,9 @@
     @include tablets(){
       margin-left: 11%;
     }
+    @include phones(){
+      display: none;
+    }
   }
 }
 .slider {
@@ -43,10 +46,7 @@
   @include phones() {
     width: 100%;
     height: auto;
-    margin-bottom: 60px;
-    &:before {
-      display: none;
-    }
+    margin-bottom:0;
   }
 } 
 .slider__preview {
@@ -110,7 +110,7 @@
   
   @include phones() {
     z-index: 2;
-    top: 21.3%;
+    bottom:22%;
   }
 }
 .slider__switch {
@@ -196,7 +196,7 @@
     padding-top: 2rem;
   }
   @include phones() {
-    padding: 65px 50px;
+    padding: 0;
   }
 }
 .slider-desc__content {
@@ -217,11 +217,19 @@
     left: 6rem;
     width: 77%;
   }
+  @include phones(){
+    width: 100%;
+  }
 }
 .slider-desc__title {
   color: #414c63;
   font-size: 30px;
   font-weight: 700;
+  @include phones(){
+    position: absolute;
+    right: 15rem;
+    top: 0rem;
+  }
 }
 .slider-desc__info {
   color: #2b3948;
@@ -230,6 +238,13 @@
   @include tablets(){
     width: 72%;
     text-align: center;
+  }
+  @include phones(){
+    width: 100%;
+    position: absolute;
+    top: 7rem;
+    left: -5rem;
+    text-align: left;
   }
 }
 .slider-desc__link {
@@ -241,6 +256,13 @@
   text-decoration: none;
   @include tablets(){
     padding-top: 2rem;
+  }
+  @include phones(){
+    position: absolute;
+    top: 11rem;
+    right: 146px;
+    margin: 0;
+    left: -81px;
   }
   &:hover {
     color: #414c63;
@@ -260,5 +282,9 @@
   @include tablets() {
     left: 6%;
     top:75%;
+  }
+  @include phones(){
+    left: 4%;
+    top:90%;
   }
 }
