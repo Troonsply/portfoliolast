@@ -12,7 +12,7 @@
     top: 50%;
     transform: translateY(-76%);
     line-height: 1;
-    right:15%;
+    left: 66%;
     font-size: 400px;
     font-weight: 800;
     color: $text-color;
@@ -20,8 +20,9 @@
     
     @include desktop() {
       top: 0;
-      transform: translateY(-15%);
-      margin-left: -11%;
+      transform: translateY(-14%);
+      margin-left: -4%;
+      z-index: -1;
     }
   }
 }
@@ -45,6 +46,8 @@
   }
 } 
 .slider__preview {
+  width: 977px;
+  height: 553px;
  
   @include phones() {
   object-fit: contain;
@@ -123,7 +126,7 @@
   transition: fill 0.2s;
 }
 .slider__switch:hover .slider__arrow-svg--denied {
-  fill: $violet;
+  fill: $text-color;
   transition: fill 0.2s;
 }
 .slider__arrow-svg {
@@ -142,30 +145,20 @@
   position: relative;
   width: 34%;
   display: flex;
-   @include tablets() {
-     width: 100%;
+   @include desktop() {
      justify-content: center;
-     text-align: center;
-     padding-top: 4rem;
-     margin: 0 4rem;
    }
     @include phones() {
       width: 100%;
   }
 }
 
-.slide-num {
-  z-index: 0;
-  color: #f0f0f0;
-  margin-left: -55px;
-  position: relative;
-  font-size: 400px;
-  font-weight: 800;
-  line-height: 473px;
-}
 .slider-desc__list {
   display: flex;
   margin-left: 95%;
+  @include desktop(){
+  margin-left: 21%;
+  }
   @include tablets() {
     padding: 35px 0;
     justify-content: center;
@@ -186,7 +179,7 @@
   }
 }
 .slider-desc {
-  padding-left: 11.2rem;
+  padding-left: 3.2rem;
   @include tablets(){
     padding-left: 0;
     width: 75%;
@@ -201,8 +194,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-    @include tablets(){
-      height: 243px;
+  @include desktop(){
+    position: absolute;
+    top: 1rem;
+    left: 9rem;
+    }
+  @include tablets(){
+    height: 243px;
     margin-top: 0;
   }
 }
