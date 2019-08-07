@@ -3,6 +3,9 @@
   width: 100%;
   display: flex;
   position: relative;
+  @include tablets(){
+    flex-flow: column;
+  }
   @include phones() {
     margin-top: 0;
   }
@@ -21,8 +24,11 @@
     @include desktop() {
       top: 0;
       transform: translateY(-14%);
-      margin-left: -4%;
+      margin-left: -2%;
       z-index: -1;
+    }
+    @include tablets(){
+      margin-left: 11%;
     }
   }
 }
@@ -31,10 +37,8 @@
   position: relative;
   @include tablets() {
     flex-flow: column;
-  }
-  @include tablets() {
-    margin-bottom: 105px;
-    width: 86%;
+    margin-bottom:2.5rem;
+    width: 84%;
   }
   @include phones() {
     width: 100%;
@@ -48,8 +52,11 @@
 .slider__preview {
   width: 977px;
   height: 553px;
- 
-  @include phones() {
+  @include tablets(){
+    width: 61rem;
+    height: 25.5rem;
+  }  
+ @include phones() {
   object-fit: contain;
   }
 }
@@ -60,7 +67,7 @@
   display: flex;
   flex-flow: column;
  @include tablets() {
-   top:14%;
+   bottom: 0;
  }
   @include phones() {
     display: none;
@@ -80,6 +87,10 @@
     width: 144.6px;
     height: 81px;
   }
+  @include tablets(){
+    width: 177px;
+    height: 91px;
+  }
 }
 .slider__list-item-pic {
   width: 100%;
@@ -94,7 +105,7 @@
   bottom: -3.1rem;
   display: flex;
   @include tablets() {
-    bottom: 17.7%;
+    bottom: -11.3%;
   }
   
   @include phones() {
@@ -148,7 +159,7 @@
    @include desktop() {
      justify-content: center;
    }
-    @include phones() {
+    @include tablets() {
       width: 100%;
   }
 }
@@ -160,7 +171,6 @@
   margin-left: 21%;
   }
   @include tablets() {
-    padding: 35px 0;
     justify-content: center;
     margin-left: 0;
   }
@@ -183,6 +193,7 @@
   @include tablets(){
     padding-left: 0;
     width: 75%;
+    padding-top: 2rem;
   }
   @include phones() {
     padding: 65px 50px;
@@ -200,8 +211,11 @@
     left: 9rem;
     }
   @include tablets(){
-    height: 243px;
-    margin-top: 0;
+    height: 10rem;
+    padding-top: 2rem;
+    align-items: center;
+    left: 6rem;
+    width: 77%;
   }
 }
 .slider-desc__title {
@@ -213,6 +227,10 @@
   color: #2b3948;
   font-size: 16px;
   font-weight: 400;
+  @include tablets(){
+    width: 72%;
+    text-align: center;
+  }
 }
 .slider-desc__link {
   font-size: 18px;
@@ -221,7 +239,9 @@
   position: relative;
   color: #4b6fd7;
   text-decoration: none;
-
+  @include tablets(){
+    padding-top: 2rem;
+  }
   &:hover {
     color: #414c63;
   }
@@ -238,6 +258,7 @@
   height: 15px;
   fill: #4b6fd7;
   @include tablets() {
-    left: 30%;
+    left: 6%;
+    top:75%;
   }
 }

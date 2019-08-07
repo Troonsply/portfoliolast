@@ -26,7 +26,7 @@
   padding-top: 10%;
   @include tablets(){
     padding-top: 18%;
-    margin-left: 10%;
+    margin-left: 4%;
   }
   @include phones(){
     align-items: center;
@@ -62,6 +62,9 @@
 }
 .feedback-arrow__prev {
   transform: rotate(180deg);
+  @include tablets(){
+    transform: rotate(0deg);
+  }
 }
 .feedback-arrow__prev:hover {
   border: 1px solid $violet;
@@ -70,7 +73,8 @@
 
 .feedback-arrow__next {
   margin-left: 5%;
-    @include tablets(){
+  @include tablets(){
+    transform: rotate(180deg);
     margin-left: 3%;
   }
 }
