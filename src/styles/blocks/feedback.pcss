@@ -7,7 +7,7 @@
   min-height: 1400px;
   max-height: 1400px;
 }
-.feedback-container {
+.feedback__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26,7 +26,7 @@
   padding-top: 10%;
   @include tablets(){
     padding-top: 18%;
-    margin-left: 10%;
+    margin-left: 4%;
   }
   @include phones(){
     align-items: center;
@@ -58,20 +58,28 @@
   @include phones(){
     left:30%;
     top:8%;
+    margin-left: 20%;
   }
 }
 .feedback-arrow__prev {
   transform: rotate(180deg);
+  @include tablets(){
+    transform: rotate(0deg);
+  }
 }
 .feedback-arrow__prev:hover {
-  border-color: #596478;
-  transition: border-color .3s;
+  border: 1px solid $violet;
+  transition: 0.3s;
 }
 
 .feedback-arrow__next {
-  left: 49%;
+  margin-left: 5%;
+  @include tablets(){
+    transform: rotate(180deg);
+    margin-left: 3%;
+  }
 }
 .feedback-arrow__next:hover {
-  border-color: #596478;
-  transition: border-color .3s;
+  border: 1px solid $violet;
+  transition: 0.3s;
 }

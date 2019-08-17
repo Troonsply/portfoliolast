@@ -1,14 +1,10 @@
-/* .fullscreen-section {
-    background-image: url("../images/parallax/mountain.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1080px;
-} */
-.welcome-container {
-    position: relative;
+.welcome {
+  position: relative;
+  padding-top: 3rem;
+}
+.welcome__container {
     display: flex;
     flex-direction: column;
-    height: 100%;
     align-items: center;
     justify-content: center;
       @include desktop {
@@ -23,7 +19,7 @@
     font-weight: 800;
     text-align: center;
     line-height: 100%;
-    padding-top: 30%;
+    margin-top: 17%;
     padding-bottom: 30%;
     @include desktop() {
         display: flex;
@@ -42,6 +38,7 @@
     font-weight: 600;
     text-align: center;
     line-height: normal;
+    padding-bottom: 12%;
     @include desktop() {
         text-align: right;
         margin-bottom: 0;
@@ -51,6 +48,9 @@
     @include tablets() {
         text-align: center;
         margin-right: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
   }
     @include phones() {
         font-size: 14px;
@@ -62,12 +62,12 @@
     font-size: 36px;
   }
 }
-.welcome-scroll {
+.welcome__scroll {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 15%;
+    bottom: 19%;
     width: 100%;
     @include tablets() {
         display: none;

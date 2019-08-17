@@ -1,15 +1,6 @@
-.parallax
-    .parallax__item(data-speed="0.1")
-        +image('parallax/hero/Sky.jpg', 'parallax__img')
-    .parallax__item(data-speed="0.08")
-        +image('parallax/hero/Mountain.png', 'parallax__img')
-    .parallax__item(data-speed="0.25")
-        +image('parallax/hero/Baloon.png', 'parallax__img')
-    .parallax__item(data-speed="0.2")
-        +image('parallax/hero/Cloud.png', 'parallax__img')
-    .parallax__item
-        +image('parallax/hero/Man.png', 'parallax__img')
-    .parallax__item
-        +image('parallax/hero/Mountain1.png', 'parallax__img')
-    .parallax__item
-        +image('parallax/hero/White.png', 'parallax__img')  
+section.parallax
+    - for (var i = 1; i <= 7; i++)
+        .parallax__layer
+            picture
+                source(srcset=require(`images/parallax/${i}_2560.${i === 1 ? 'jpg' : 'png'}`) media="(min-width: 1920px)").parallax__image
+                img(srcset=require(`images/parallax/${i}.${i === 1 ? 'jpg' : 'png'}`) :alt="Элемент parallax").parallax__image

@@ -5,11 +5,10 @@ script(type="text/x-template")#reviews-template
                 review(
                     :review="review"
                 )
-        .feedback-arrow
-            button.feedback-arrow__prev(type='button' @click="previous()")
-                +icon('short_arrow', 'arrow__btn--prev')
-            button.feedback-arrow__next(type='button' @click="next()")
-                +icon('short_arrow', 'arrow__btn--next')
+        button.feedback-arrow__btn.feedback-arrow__prev(type='button' @click="previous()" :class="{feedbackBtnOff: btnIndex === 0}")
+            +icon('short_arrow', 'arrow__btn--svg arrow__btn--prev')
+        button.feedback-arrow__btn.feedback-arrow__next(type='button' @click="next()" :class="{feedbackBtnOff: btnIndex === btnClicks}")
+            +icon('short_arrow', 'arrow__btn--svg arrow__btn--next')
 
 script(type="text/x-template")#review-template
     .reviews__item

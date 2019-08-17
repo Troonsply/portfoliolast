@@ -7,8 +7,8 @@
       margin:0 auto;
     }
     @include phones(){
-    margin-left: 0;
-     overflow: hidden;
+    overflow: hidden;
+    margin: 3rem auto;
   }
 }
 .reviews__slider-item {
@@ -22,6 +22,7 @@
     @include tablets() {
       align-items: center;
       justify-content: center;
+      left: 9%;
     }
 
     @include phones() {
@@ -46,7 +47,7 @@
    @include tablets() {
       position: absolute;
       top: 1%;
-      left: -12%;
+      left: 0;
    }
     @include phones(){
       display:none;
@@ -71,4 +72,18 @@
 }
 .reviews__item {
   width: 100%;
+}
+.feedbackBtnOff {
+  border: 1px solid $text-color;
+  &:hover {
+    border: 1px solid $text-color;
+    transition: 1s;
+  }
+}
+.feedbackBtnOff .arrow__btn--svg {
+  fill: $text-color;
+}
+.feedbackBtnOff:hover .arrow__btn--svg {
+  fill: $text-color;
+  transition: 1s;
 }

@@ -1,7 +1,10 @@
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
   z-index: 5;
   .overlay {
     position: absolute;
@@ -19,36 +22,12 @@
     }
   }
 }
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 20px;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  &__top-line {
-    display: block;
-    width: inherit;
-    height: 4px;
-    background-color: $text-color;
-  }
-  &__middle-line {
-    display: block;
-    width: inherit;
-    height: 4px;
-    background-color: $text-color;
-  }
-  &__low-line {
-    display: block;
-    width: inherit;
-    height: 4px;
-    background-color: $text-color;
-  }
+.menu--mobile {
+  display: flex;
+  flex-flow: column;
+  font-weight: 600;
+  padding-bottom: 3%;
 }
-
 #close-btn {
   color: $text-color;
   font-size: 50px;

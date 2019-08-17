@@ -38,7 +38,6 @@ body {
 }
 
 .fullscreen-section {
-  height: 100vh;
   min-height: 650px;
 }
 
@@ -110,5 +109,14 @@ img {
     @include phones() {
     font-size: 24px;
     text-align: center;
+  }
+}
+.first-section {
+  @include phones(){
+  background: url('../images/parallax/mountain.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right 27%;
+  clip-path: polygon(0 0,0 94%,50% 97%,100% 94%,100% 0);
   }
 }

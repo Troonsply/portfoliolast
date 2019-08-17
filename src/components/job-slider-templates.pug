@@ -1,0 +1,54 @@
+script(type="text/x-template")#slider-template
+    .slider-wrap(:data-slide="currentIndex +1")
+        sliderDisplay(
+            :sliderData='sliderData'
+            :currentProject='currentProject'
+            @slide="handleSlide"
+            @choose="chooseSlide"
+            )
+        sliderContent(
+            :currentProject='currentProject'
+        )
+script(type="text/x-template")#sliderDisplay-template
+    .slider
+        img(:src='currentProject.photo' alt = 'Скрины проекта Бусловой Екатерины портфолио').slider__preview
+        sliderList(
+            :sliderData='sliderData'
+            :currentProject='currentProject'
+            @choose="index => $emit('choose', index)"
+        )
+        sliderSwitch(
+            @slide="direction => $emit('slide', direction)"
+        )
+script(type="text/x-template")#sliderList-template
+    .slider__list-wrap 
+        .slider__list
+            button.slider__item(
+                type="button"
+                v-for='item in sliderData'
+                :class="{sliderListItemActive: item.id === currentProject.id}"
+                @click="$emit('choose', item.id - 1)"
+            )
+                img(:src='item.photo' alt="Скрины проекта Бусловой Екатерины портфолио").slider__list-item-pic
+script(type="text/x-template")#sliderSwitch-template
+    .slider__switch-wrap
+        button(@click="$emit('slide', 'next')" class="slider__switch-next" type="button").slider__switch
+            +icon('short_arrow', 'slider__arrow-svg slider__arrow-svg-next')
+        button(@click="$emit('slide', 'prev')"  class="slider__switch-prev" type="button").slider__switch
+            +icon('short_arrow', 'slider__arrow-svg slider__arrow-svg-prev')
+script(type="text/x-template")#sliderContent-template
+    .slider-desc__wrap
+        .slider-desc
+            sliderContentTags(
+                :tags="tagsArray"
+            )
+        .slider-desc__content
+            h4.slider-desc__title {{currentProject.title}}
+            .slider-desc__info
+                p {{currentProject.info}}
+            a.slider-desc__link(:href="currentProject.link") Посмотреть сайт
+                +icon('Link', 'slider-desc__link__svg')
+
+script(type="text/x-template")#sliderContentTags-template
+    ul.slider-desc__list
+        li(v-for="tag in tags").slider-desc__item {{tag}}
