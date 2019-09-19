@@ -73,5 +73,4 @@ async function main() {
 
   registerUser(name.trim(), password.trim());
 }
-
 main();
