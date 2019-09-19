@@ -6,7 +6,7 @@
           .user__pic
             img(src="../../images/content/user/user1.jpg").user__pic-avatar
           .user__name 
-            span Екатерина Буслова
+            span Буслова Екатерина
             a.exit-btn(@click="logout") Выйти
             
         .header__title Панель администрирования

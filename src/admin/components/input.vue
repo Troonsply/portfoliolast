@@ -59,7 +59,7 @@ export default {
     }
   },
   components: {
-    errorsTooltip: () => import("../components/errors-tooltip.vue")
+    errorsTooltip: () => import("components/errors-tooltip.vue")
   }
 };
 </script>
@@ -120,7 +120,7 @@ export default {
     @each $icon in (user, key) {
       &.input_icon-$(icon) {
         .input__elem {
-          background-image: svg-load("$(icon).svg", fill=#cd1515);
+          background-image: svg-load("$(icon).svg", fill=$errors-color);
         }
       }
     }
@@ -129,7 +129,7 @@ export default {
 
 .error {
   .field__elem {
-    border-color: #cd1515;
+    border-color: $errors-color;
   }
 
   .input__error-tooltip {

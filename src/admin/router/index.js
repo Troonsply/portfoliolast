@@ -1,20 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import routes from "./routes";
+import routes from "@/router/routes";
 import axios from "axios";
-import store from "../store/index.js";
-import requests from "../requests";
-
-import {
-  setAuthHttpHeaderToAxios,
-  getToken,
-  removeToken
-} from "../helpers/token";
+import store from "@/store"
 
 Vue.use(VueRouter);
 
-const baseURL = requests.defaults.baseURL;
-
+const baseURL = "http://localhost:8000";
 const guard = axios.create({ baseURL });
 
 const router = new VueRouter({ routes });
@@ -24,17 +16,21 @@ router.beforeEach(async (to, from, next) => {
   const isUserLogged = store.getters["user/userIsLogged"];
 
   if (isPublicRoute === false && isUserLogged === false) {
-    setAuthHttpHeaderToAxios(guard, getToken());
+    const token = localStorage.getItem('token');
+    guard.defaults.headers['Authorization'] = `Bearer ${token}`;
+
     try {
-      const response = await guard.get("/user");
-      store.commit("user/SET_USER", response.data.user);
-      next();
+      const response = await guard.get('/user');
+      store.commit('user/SET_USER', response.data.user);
+      next(); 
     } catch (error) {
-      router.replace("/login");
-      removeToken();
+      router.replace('/login');
+      localStorage.removeItem('token');
     }
+
   } else {
     next();
   }
 });
+
 export default router;
