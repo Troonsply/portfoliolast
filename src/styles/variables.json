@@ -6,5 +6,6 @@
   "bp-tablets": "768px",
   "bp-phones": "480px",
   "bp-desktop-bg":"2650",
-  "violet":"#8500ef"
+  "violet":"#8500ef",
+  "errors-color": "#cd1515"
 }
