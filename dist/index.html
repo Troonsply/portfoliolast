@@ -365,7 +365,7 @@
             <div class="reviews__author">
                 <div class="user user--photo">
                     <div class="user__avatar user__avatar_small"><img class="user__avatar--small-pic"
-                                                                      :src="review.avatar" :alt="review.autor"></div>
+                                                                      :src="`.${review.avatar}`" :alt="review.autor"></div>
                     <div class="user__bio">
                         <div class="user__name">{{ review.autor }}</div>
                         <div class="user__position">{{ review.position }}</div>
