@@ -8844,7 +8844,7 @@
             makeArrWithRequiredImages: function (t) {
                 return t.map((function (t) {
                     var e = n(362)("./".concat(t.avatar));
-                    return `.${t.avatar}` = e, t
+                    return t.avatar = e, t
                 }))
             }, next: function () {
                 this.$refs.flickity.next(), window.innerWidth < 480 ? this.btnIndex < this.feedbackData.length - 1 && (this.btnIndex++, this.btnClicks = this.feedbackData.length - 1) : this.btnIndex < this.feedbackData.length / 2 - 1 && (this.btnIndex++, this.btnClicks = this.feedbackData.length / 2 - 1)
