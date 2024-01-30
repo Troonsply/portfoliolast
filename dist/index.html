@@ -392,7 +392,7 @@
         <div class="slider__list">
             <button class="slider__item" type="button" v-for="item in sliderData"
                     :class="{sliderListItemActive: item.id === currentProject.id}"
-                    @click="$emit('choose', item.id - 1)"><img class="slider__list-item-pic" :src=`./${item.photo}`
+                    @click="$emit('choose', item.id - 1)"><img class="slider__list-item-pic" :src="`./${item.photo}`"
                                                                alt="Скрины проекта Бусловой Екатерины портфолио">
             </button>
         </div>

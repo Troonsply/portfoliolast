@@ -289,7 +289,7 @@ img {
 
 @media screen and (max-width: 480px) {
     .first-section {
-        background: url(/ef8cb21bef342013a58a7f539b6cf121.jpg);
+        background: url(./ef8cb21bef342013a58a7f539b6cf121.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top right 27%;
@@ -2048,7 +2048,7 @@ img {
 .skills__container:before {
     content: "";
     position: absolute;
-    background: url(/84e49a262d398f888d9e3bb0ec0a5a4f.png);
+    background: url(./84e49a262d398f888d9e3bb0ec0a5a4f.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
