@@ -1,7 +1,0 @@
-mixin socials(mod)
-    ul(class='socials socials--' + mod)
-        - var socials = [{name: 'Instagram', link: 'https://instagram.com'}, {name: 'Vkontakte', link: 'https://vk.com'}, {name: 'Github',link: 'https://github.com/Troonsply'}];
-        each item in socials
-            li.socials__item
-                a.socials__link(href=item.link)
-                    +icon(`${item.name}`,'socials__icon')
